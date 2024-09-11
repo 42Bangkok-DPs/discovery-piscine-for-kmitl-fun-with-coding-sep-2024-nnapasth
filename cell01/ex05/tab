@@ -1,0 +1,32 @@
+<DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Two Boxes</title>
+        <style>
+            table {
+                width: 100%;
+            }
+            td{
+                height: 100px;
+                text-align: center;
+                font-size: 24px;
+            }
+            .first-cell {
+                background-color: blue;
+            }
+            .second-cell {
+                background-color: coral;
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td class="first-cell">Hello<\td>
+                <td class="second-cell">World<\td>
+            <\<tr>
+        </table>
+    </body>
+</html>
