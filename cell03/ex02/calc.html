@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Math</title>
+</head>
+<body>
+
+    <input type="text" id="leftvalue" placeholder="Left Member" min="0">
+
+    <select id="symbol">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+        <option value="%">%</option>
+    </select>
+
+    <input type="text" id="rightvalue" placeholder="Right Member" min="0">
+
+    <input type="button" value="Try me!" onclick="calculate()">
+
+    <script>
+        function calculate() {
+            const leftvalue = parseInt(document.getElementById('leftvalue').value);
+            const rightvalue = parseInt(document.getElementById('rightvalue').value);
+            const operator = document.getElementById('symbol').value;
+
+
+            if (isNaN(leftvalue) || isNaN(rightvalue) || leftvalue < 0 || rightvalue < 0) {
+                alert('Error :(');
+                return;
+            }
+
+        
+            if ((operator === '/' || operator === '%') && rightvalue === 0) {
+                alert("It's over 9000!");
+                console.log("It's over 9000!");
+                return;
+            }
+
+            let result;
+            switch (operator) {
+                case '+':
+                    result = leftvalue + rightvalue;
+                    break;
+                case '-':
+                    result = leftvalue - rightvalue;
+                    break;
+                case '*':
+                    result = leftvalue * rightvalue;
+                    break;
+                case '/':
+                    result = leftvalue / rightvalue;
+                    break;
+                case '%':
+                    result = leftvalue % rightvalue;
+                    break;
+                default:
+                    alert('Invalid operator');
+                    return; 
+            }
+
+            alert(`Result: ${result}`);
+            console.log('Result:', result);
+        }
+
+        setInterval(function() {
+            alert('Please, use me...');
+        }, 30000);
+    </script>
+
+</body>
+</html>
