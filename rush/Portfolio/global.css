@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap');
+
+body {
+  margin: 0;
+  font-family: "Jura", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --primary-color: #6B0071;
+  --secondary-color: #C54090;
+  --background-color: #f4f4f4;
+  --font-size-large: 3em;
+  --font-size-medium: 1.2em;
+  --padding-large: 100px 20px;
+}
+
+.button {
+  min-width: 240px;
+  height: 60px;
+  text-decoration: none !important;
+  display: flex;
+  border-radius: 16px;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
+
+.primary-button {
+  border: 1px solid var(--secondary-color);
+  background: white;
+  color: var(--secondary-color);
+}
+
+.primary-button:hover {
+  background: #D067A7;
+  color: white;
+}
+
+.primary-button:focus {
+  background: var(--secondary-color);
+  color: white;
+}
+
+.text-main {
+  color: var(--primary-color);
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+h3 {
+  font-size: 96px;
+  color: var(--primary-color);
+  margin-bottom: 8px;
+}
+
+h2 {
+  font-size: 64px;
+  color: var(--primary-color);
+}
+
+h1 {
+  font-size: 32px;
+  color: var(--primary-color);
+  margin-bottom: 48px;
+}
+
+p {
+  font-size: 32px;
+  color: #00000;
+
+}
+
+small {
+  font-size: 24px;
+}

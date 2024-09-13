@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Main Page</title>
+  <style>
+    body {
+    }
+
+    .background {
+      background: url('./images/home_image.png') no-repeat center center fixed;
+      background-size: cover;
+      background-attachment: scroll;
+      background-position: center;
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 72px;
+    }
+
+    .button-group {
+      display: flex;
+      justify-content: center;
+      gap: 160px;
+    }
+
+    .title {
+      font-size: 96px;
+      text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+      margin-bottom: 64px;
+    }
+
+    .desc {
+      font-size: 64px;
+      margin-bottom: 24px;
+    }
+
+    .select {
+      font-size: 32px;
+      margin-bottom: 0px;
+    }
+  </style>
+
+  <link rel="stylesheet" href="./global.css">
+</head>
+
+<body>
+  <div class="background">
+  <div class="container">
+    <div>
+      <h1 class="text-main title">Discovery Piscine</h1>
+      <p class="text-main desc">Rush Project</p>
+      <p class="text-main select"> We are Industrial Design Student</p>
+      <p class="text-main select">Select a Pisciner</p>
+    </div>
+
+    <div class="button-group">
+      <a class="button primary-button" href="./nthienta.html">nthienta</a>
+      <a class="button primary-button" href="./vsritawe.html">vsritawe</a>
+    </div>
+  </div>
+  </div>
+</body>
+
+</html>
