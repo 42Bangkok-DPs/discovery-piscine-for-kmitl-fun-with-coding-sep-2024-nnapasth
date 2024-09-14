@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+</head>
+<body>
+
+    <input type="text" id="leftvalue" placeholder="Left Member" min="0">
+
+    <select id="operator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+        <option value="%">%</option>
+    </select>
+
+    <input type="text" id="rightvalue" placeholder="Right Member" min="0">
+
+    <input type="button" value="Try me!" id="calculate-btn">
+
+    <script>
+        $(document).ready(function() {
+            
+            $('#calculate-btn').click(function() {
+                const leftvalue = parseInt($('#leftvalue').val());
+                const rightvalue = parseInt($('#rightvalue').val());
+                const operator = $('#operator').val();
+
+                if (isNaN(leftvalue) || isNaN(rightvalue) || leftvalue < 0 || rightvalue < 0) {
+                    alert('Error :(');
+                    return;
+                }
+
+                if ((operator === '/' || operator === '%') && rightvalue === 0) {
+                    alert("It's over 9000!");
+                    return;
+                }
+
+                let result;
+                switch (operator) {
+                    case '+':
+                        result = leftvalue + rightvalue;
+                        break;
+                    case '-':
+                        result = leftvalue - rightvalue;
+                        break;
+                    case '*':
+                        result = leftvalue * rightvalue;
+                        break;
+                    case '/':
+                        result = leftvalue / rightvalue;
+                        break;
+                    case '%':
+                        result = leftvalue % rightvalue;
+                        break;
+                    default:
+                        alert('Invalid operator');
+                        return;
+                }
+
+                alert(`Result: ${result}`);
+            });
+
+            // Alert every 30 seconds
+            setInterval(function() {
+                alert('Please, use me...');
+            }, 30000);
+        });
+    </script>
+
+
+</body>
+</html>
